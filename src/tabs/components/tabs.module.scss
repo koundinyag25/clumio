@@ -1,0 +1,31 @@
+.tabsContainer {
+  display: flex;
+  flex-direction: column;
+
+  .tabsHeader {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    // background: #b0b3b8;
+    .tabs {
+      color: #1565c0;
+      display: flex;
+      font-size: 1rem;
+      .tab {
+        padding: 1rem;
+        &:hover {
+          border-bottom: 2px solid cyan;
+          cursor: pointer;
+        }
+        &.selected {
+          border-bottom: 2px solid cyan !important;
+        }
+      }
+    }
+  }
+
+  .tabPanel {
+    padding: 1rem;
+  }
+}

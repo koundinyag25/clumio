@@ -1,0 +1,8 @@
+.movieList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.4rem;
+  overflow-y: scroll;
+  height: 84vh;
+}

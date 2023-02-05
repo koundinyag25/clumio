@@ -1,0 +1,23 @@
+.settingsPane {
+  padding: 1rem;
+  width: 20%;
+  &.dark {
+    border-left: 1px solid #424242;
+  }
+  &.light {
+    border-left: 1px solid #eee;
+  }
+  .toggleButton {
+    display: flex;
+    align-items: center;
+    background: #f48fb1;
+    border-radius: 0.2rem;
+    justify-content: center;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    &.light {
+      background: #303f9f;
+      color: white;
+    }
+  }
+}
