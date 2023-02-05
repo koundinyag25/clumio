@@ -17,7 +17,7 @@ const MovieCard = (props) => {
   } = props;
 
   const { theme } = useContext(ThemeContext);
-
+  console.log(getSource(poster_path), getSource(backdrop_path));
   return (
     <div
       className={styles.container}
@@ -26,7 +26,13 @@ const MovieCard = (props) => {
         width: 154,
       }}
     >
-      <img src={getSource(poster_path)} />
+      {poster_path ? (
+        <img src={getSource(poster_path)} alt={getSource(backdrop_path)} />
+      ) : (
+        <div className={styles.noImage}>
+          <div>No Image</div>
+        </div>
+      )}
       <div className={styles.details}>
         <h5>{title}</h5>
         {/* <h5>{overview}</h5> */}
