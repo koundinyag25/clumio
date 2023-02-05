@@ -10,4 +10,4 @@ const MovieListRenderer = ({ data: mediaItems }) => {
   return <div className={styles.movieList}>{renderMediaItems()}</div>;
 };
 
-export default MovieListRenderer;
+export default React.memo(MovieListRenderer);

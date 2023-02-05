@@ -1,5 +1,3 @@
-import _debounce from 'lodash/debounce';
-
 import { MOVIE_LIST_CATGEGOTY_CONFIG } from '../../organisms/movieList/movieListTabs.config';
 import {
   getGenerListByType,
@@ -104,6 +102,7 @@ const handleSetSearchText = ({ getState, setState, payload = {} }) => {
           rating: 5,
         },
         currentCategory: '',
+        searchText: '',
       },
       () => {
         handleGetMediaItems({ getState, setState });

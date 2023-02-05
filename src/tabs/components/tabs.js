@@ -22,9 +22,12 @@ const Tabs = ({
     [config]
   );
 
-  const handleTabClick = (tabKey) => () => {
-    onTabSelect(tabKey);
-  };
+  const handleTabClick = useCallback(
+    (tabKey) => () => {
+      onTabSelect(tabKey);
+    },
+    []
+  );
 
   const renderTabs = () => {
     const tabs = (config || []).map(({ tabKey, label }) => {

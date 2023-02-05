@@ -8,15 +8,18 @@ const SearchBar = ({ onSearch, value, onAction }) => {
 
   const debounce = useMemo(() => _debounce(onAction, 3000), []);
 
-  const handleChange = (e) => {
-    setSearchText(e.target.value);
-    debounce({
-      type: ACTIONS.SET_SEARCH_TEXT,
-      payload: {
-        searchText: e.target.value,
-      },
-    });
-  };
+  const handleChange = useCallback(
+    (e) => {
+      setSearchText(e.target.value);
+      debounce({
+        type: ACTIONS.SET_SEARCH_TEXT,
+        payload: {
+          searchText: e.target.value,
+        },
+      });
+    },
+    [onAction, debounce]
+  );
 
   return (
     <div className={sx.container}>

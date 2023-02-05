@@ -1,11 +1,9 @@
 import React, { useCallback } from 'react';
-import _debounce from 'lodash/debounce';
 
 import ACTIONS from '../../pages/movieListpage/movieListPage.actions';
+import SearchBar from './searchBar';
 import Tabs from '../../tabs';
 import { MOVIE_LIST_CATGEGOTY_CONFIG } from './movieListTabs.config';
-import SearchBar from './searchBar';
-// import ACTIONS from '../../pages/movieListPage/movieListPage.actions';
 
 const MovieList = ({ onAction, mediaItems, currentCategory, searchText }) => {
   const config = Object.values(MOVIE_LIST_CATGEGOTY_CONFIG);

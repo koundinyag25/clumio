@@ -56,4 +56,4 @@ const RatingSelector = ({ rating = 0, onStarClick = () => {} }) => {
   return <div className={styles.container}>{renderStars()}</div>;
 };
 
-export default RatingSelector;
+export default React.memo(RatingSelector);
