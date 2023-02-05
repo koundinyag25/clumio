@@ -66,13 +66,16 @@ const handleGetMediaItems = async ({ getState, setState }) => {
 const handleSetFilters = ({ getState, setState, payload = {} }) => {
   const { filters: prevFilters } = getState();
   const { key, value } = payload;
-  setState({ filters: { ...prevFilters, [key]: value } }, () => {
-    if (key === 'type') {
-      handleGetGenerByType({ getState, setState });
-    } else {
-      handleGetMediaItems({ getState, setState });
+  setState(
+    { filters: { ...prevFilters, [key]: value }, searchText: '' },
+    () => {
+      if (key === 'type') {
+        handleGetGenerByType({ getState, setState });
+      } else {
+        handleGetMediaItems({ getState, setState });
+      }
     }
-  });
+  );
 };
 
 const handleGetMediaItemsBySearch = async ({

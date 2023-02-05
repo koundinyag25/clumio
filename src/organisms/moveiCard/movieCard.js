@@ -14,6 +14,9 @@ const MovieCard = (props) => {
     backdrop_path,
     poster_path,
     release_date,
+    name,
+    original_name,
+    original_title,
   } = props;
 
   const { theme } = useContext(ThemeContext);
@@ -34,10 +37,10 @@ const MovieCard = (props) => {
         </div>
       )}
       <div className={styles.details}>
-        <h5>{title}</h5>
+        <h5>{title || original_title || name || original_name}</h5>
         {/* <h5>{overview}</h5> */}
         <h5>release date: {release_date}</h5>
-        <h5>{vote_count}</h5>
+        <h5>votes: {vote_count}</h5>
       </div>
     </div>
   );
