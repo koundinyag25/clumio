@@ -17,7 +17,7 @@ const MovieCard = (props) => {
   } = props;
 
   const { theme } = useContext(ThemeContext);
-  console.log(getSource(poster_path), getSource(backdrop_path));
+
   return (
     <div
       className={styles.container}

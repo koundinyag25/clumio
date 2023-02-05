@@ -5,4 +5,9 @@
   padding: 0.4rem;
   overflow-y: scroll;
   height: 84vh;
+  .noData {
+    text-align: center;
+    height: 84vh;
+    width: 100%;
+  }
 }

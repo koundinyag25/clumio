@@ -6,7 +6,7 @@ import sx from './searchBar.module.scss';
 const SearchBar = ({ onSearch, value, onAction }) => {
   const [searchText, setSearchText] = useState(value);
 
-  const debounce = useMemo(() => _debounce(onAction, 3000), []);
+  const debounce = useMemo(() => _debounce(onAction, 1000), []);
 
   const handleChange = useCallback(
     (e) => {
